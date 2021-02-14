@@ -1,10 +1,15 @@
 import '../styles/globals.css';
 
 import { AppProps } from 'next/app';
-import { ReactElement } from 'react';
 
-const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
-  return <Component {...pageProps} />;
+import Responsive from '../components/layout/Responsive';
+
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <Responsive>
+      <Component {...pageProps} />
+    </Responsive>
+  );
 };
 
 export default MyApp;

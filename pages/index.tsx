@@ -1,12 +1,12 @@
-import { ReactElement } from 'react';
+import Link from 'next/link';
 
-import Draggable from '../components/example/Draggable';
-
-const Home = (): ReactElement => {
+const Home = () => {
   return (
     <>
-      <h1>Hello Next</h1>
-      <Draggable />
+      <h1>Next Examples</h1>
+      <Link href="/drag-ui">
+        <button>aa</button>
+      </Link>
     </>
   );
 };

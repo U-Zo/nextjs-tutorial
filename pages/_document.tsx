@@ -5,7 +5,6 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
-import { ReactElement } from 'react';
 import { resetServerContext } from 'react-beautiful-dnd';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -45,7 +44,7 @@ class MyDocument extends Document {
     }
   }
 
-  render(): ReactElement {
+  render() {
     return (
       <Html lang="en">
         <Head />
