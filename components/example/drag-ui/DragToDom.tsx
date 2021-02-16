@@ -1,4 +1,5 @@
 import { MouseEvent, useRef } from 'react';
+import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
 const DragToDomBlock = styled.div`
@@ -13,13 +14,14 @@ const DragToDom = () => {
   const onMouseDown = (
     e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>,
   ) => {
+    const newElement = <div>새로운 엘리먼트</div>;
+
+    document.append(newElement);
+
     const target = domRef.current;
     if (!target) {
       return;
     }
-
-    target.style.position = 'absolute';
-    target.style.zIndex = '100';
 
     const moveAt = (pageX: number, pageY: number) => {
       target.style.left = pageX - target.offsetWidth / 2 + 'px';
