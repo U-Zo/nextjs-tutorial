@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MyComponent from '../../components/MyComponent';
 
 const FirstPost = () => {
   return (
@@ -9,6 +10,7 @@ const FirstPost = () => {
           <a>Back to Home</a>
         </Link>
       </h2>
+      <MyComponent />
     </>
   );
 };
